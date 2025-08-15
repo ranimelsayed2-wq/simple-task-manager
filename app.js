@@ -6,6 +6,10 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//install cors
+const cors = require("cors");
+app.use(cors());
+
 //Helper function to check for valid ObjectId
 function isValidObjectId(id){
     return mongoose.Types.ObjectId.isValid(id);
